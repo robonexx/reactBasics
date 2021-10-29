@@ -1,10 +1,12 @@
 import React from 'react';
-
+import Title from '../components/Title';
 
 const More = () => {
-    return (
-        <div>More</div>
-     );
-}
- 
+  return (
+    <div>
+      <Title />
+    </div>
+  );
+};
+
 export default More;

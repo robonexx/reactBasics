@@ -95,3 +95,15 @@ ul a {
 .btn.second:hover {
   background: tomato;
 }
+
+.title {
+  padding:  30px 60px;
+  background: #282828;
+  border-radius: 10px;
+}
+.subtitle {
+  padding: 10px 20px;
+  background: lightgray;
+  color: #282828;
+  border-radius: 10px;
+}
