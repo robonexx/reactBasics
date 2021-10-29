@@ -81,3 +81,13 @@ ul a {
   color: aqua;
   text-transform: uppercase;
 }
+
+.lower {
+  margin: 2rem auto;
+  font-size: 2rem;
+  width: 60%;
+}
+
+.events {
+  color: #f4e98c;
+}
