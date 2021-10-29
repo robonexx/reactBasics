@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const Home = () => {
     const [name, setName] = useState('Rob');
+    const [showEvents, setShowEvents] = useState(false)
     const [events, setEvents] = useState([
         { title: "End racism and opression", id: 1 },
         { title: "Take care of nature, pick up all your trash", id: 2 },
@@ -37,8 +38,23 @@ const Home = () => {
             <div className="lower">
                 So what are the state of the world? we need to change
             </div>
-
-            {events.map((ev) => (
+            {showEvents &&
+                (
+                    <div>
+                        <button
+                            onClick={() => setShowEvents(false)}>Hide events</button>
+                    </div>
+                )}
+            {!showEvents &&
+            (
+                <div>
+                <button
+                 onClick={() => setShowEvents(true)}>Show events</button>
+               </div>
+            )
+            }
+           
+            {showEvents && events.map((ev) => (
                 <div key={ev.id}>
                     <h2 className="events">{ev.title}</h2>
                     <button className="btn second"
