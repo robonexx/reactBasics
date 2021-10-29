@@ -3,7 +3,7 @@ import Title from '../components/Title';
 import Modal from '../components/Modal';
 
 const More = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   console.log(showModal);
 
@@ -14,6 +14,9 @@ const More = () => {
   const subtitle = 'Welcome to my house';
   return (
     <div>
+      <button className='btn' onClick={() => setShowModal(true)}>
+        Show info
+      </button>
       {showModal && (
         <Modal handleModal={handleModal}>
           <h2>Check your self</h2>
