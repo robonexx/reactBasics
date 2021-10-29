@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import EventList from '../components/EventList';
 
 const Home = () => {
     const [name, setName] = useState('Rob');
@@ -54,13 +55,7 @@ const Home = () => {
             )
             }
            
-            {showEvents && events.map((ev) => (
-                <React.Fragment key={ev.id}>
-                    <h2 className="events">{ev.title}</h2>
-                    <button className="btn second"
-                    onClick={() => {handleEvent(ev.id)}}>Delete</button>
-                </React.Fragment>
-            ))}
+            {showEvents && <EventList events={events} handleEvent={handleEvent} />}
     </div>
   );
 };
