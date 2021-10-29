@@ -14,11 +14,11 @@
       src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <title>Document</title>
+    <title>React pracice</title>
   </head>
   <body>
       <h1>React Basics</h1>
-    <div id="banner"></div>
+    <div id="doc"></div>
     <footer>
       <p>Footer</p>
     </footer>
@@ -32,8 +32,14 @@
 
         const handleClick = () => {
            let dateStyle = document.querySelector('.date')
+           let win = document.querySelector('body')
+           let head = document.querySelector('h2')
            dateStyle.style.color = "red"
            dateStyle.style.fontSize = "1.3rem"
+           dateStyle.style.fontWeight = "bold"
+           win.style.background = "#000"
+           head.style.fontSize = "1.5rem"
+           head.style.color = "tomato"
         }
 
         return (
@@ -65,7 +71,7 @@
       };
 
       // render the component
-      ReactDOM.render(<Banner />, document.getElementById('banner'))
+      ReactDOM.render(<Banner />, document.getElementById('doc'))
     </script>
   </body>
 </html>
