@@ -14,9 +14,11 @@ const Home = () => {
     };
 
     const handleEvent = (id) => {
-        setEvents(events.filter((event) => {
-            return id !== event.id
-        }))
+        setEvents(() => {
+           return events.filter((event) => {
+                return id !== event.id
+            })
+        })
     }
     return (
         <div className="home">
