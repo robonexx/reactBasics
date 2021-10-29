@@ -12,6 +12,12 @@ const Home = () => {
     const handleClick = () => {
         setName(prompt('What is your name'))
     };
+
+    const handleEvent = (id) => {
+        setEvents(events.filter((event) => {
+            return id !== event.id
+        }))
+    }
     return (
         <div className="home">
             {(name === 'Rob') ?
@@ -33,6 +39,8 @@ const Home = () => {
             {events.map((ev) => (
                 <div key={ev.id}>
                     <h2 className="events">{ev.title}</h2>
+                    <button className="btn second"
+                    onClick={() => {handleEvent(ev.id)}}>Delete</button>
                 </div>
             ))}
     </div>

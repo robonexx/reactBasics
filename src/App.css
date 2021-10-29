@@ -91,3 +91,7 @@ ul a {
 .events {
   color: #f4e98c;
 }
+
+.btn.second:hover {
+  background: tomato;
+}
