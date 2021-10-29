@@ -1,0 +1,28 @@
+body {
+    background: #282828;
+    color: #f4f4f8;
+}
+
+.banner {
+    width: 500px;
+    height: fit-content;
+    margin: 10rem auto;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+.link {
+    margin: 1rem auto;
+    color: #f4f4f8;
+    text-decoration: none;
+}
+
+.date {
+    color: greenyellow;
+}
