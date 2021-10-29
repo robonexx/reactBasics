@@ -18,3 +18,42 @@
     line-height: 1.2rem;
     transition: all 1s ease-in-out;
 }
+
+.home {
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.nav {
+  position: absolute;
+  width: 100vw;
+  height: 6vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul a {
+  padding: 0.5rem;
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #f4f4f8;
+}
+
+.firstpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8vh auto;
+  width: 80vw;
+  height: 92vh;
+}
