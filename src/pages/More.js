@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Title from '../components/Title';
 import Modal from '../components/Modal';
+import ClockHook from '../components/Clock/ClockHook';
+import ClockClass from '../components/Clock/ClockClass'
 
 const More = () => {
   const [showModal, setShowModal] = useState(false);
@@ -26,6 +28,9 @@ const More = () => {
       )}
 
       <Title text='Robs coding world' subtitle={subtitle} />
+
+      <ClockClass />
+      <ClockHook />
     </div>
   );
 };
