@@ -14,8 +14,8 @@ const Home = () => {
     };
 
     const handleEvent = (id) => {
-        setEvents(() => {
-           return events.filter((event) => {
+        setEvents((prevEvents) => {
+           return prevEvents.filter((event) => {
                 return id !== event.id
             })
         })
