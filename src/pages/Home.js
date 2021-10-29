@@ -55,11 +55,11 @@ const Home = () => {
             }
            
             {showEvents && events.map((ev) => (
-                <div key={ev.id}>
+                <React.Fragment key={ev.id}>
                     <h2 className="events">{ev.title}</h2>
                     <button className="btn second"
                     onClick={() => {handleEvent(ev.id)}}>Delete</button>
-                </div>
+                </React.Fragment>
             ))}
     </div>
   );
