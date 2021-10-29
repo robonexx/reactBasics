@@ -10,10 +10,16 @@
     justify-content: center;
 }
 .modal {
+    display: flex;
+    flex-direction: column;
     padding: 50px;
     max-width: 480px;
     margin: 20vh auto;
     background: #f9f9f9;
     color: #282828;
     border-radius: 1rem;
+}
+
+.modal button {
+    margin: 1rem;
 }

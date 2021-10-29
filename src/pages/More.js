@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Title from '../components/Title';
 import Modal from '../components/Modal';
 
 const More = () => {
+  const [showModal, setShowModal] = useState(true);
 
-    const subtitle = "Welcome to my house"
+  console.log(showModal);
+
+  const handleModal = () => {
+    setShowModal(false);
+  };
+
+  const subtitle = 'Welcome to my house';
   return (
-      <div>
-          <Modal>
-                <h2>Check your self</h2>
-                <p>before you wreck yourself</p>
-              </Modal>
-          <Title text="Robs coding world" subtitle={subtitle}/>
+    <div>
+      {showModal && (
+        <Modal handleModal={handleModal}>
+          <h2>Check your self</h2>
+          <p>before you wreck yourself</p>
+          <a href='/'>Read about it...</a>
+        </Modal>
+      )}
+
+      <Title text='Robs coding world' subtitle={subtitle} />
     </div>
   );
 };
