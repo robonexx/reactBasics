@@ -5,18 +5,18 @@ import ClockHook from '../components/Clock/ClockHook';
 import ClockClass from '../components/Clock/ClockClass'
 
 const More = () => {
-  const [showModal, setShowModal] = useState(false);
+ /*  const [showModal, setShowModal] = useState(false);
 
   console.log(showModal);
 
   const handleModal = () => {
     setShowModal(false);
-  };
+  }; */
 
   const subtitle = 'Welcome to my house';
   return (
     <div>
-      <button className='btn' onClick={() => setShowModal(true)}>
+     {/*  <button className='btn' onClick={() => setShowModal(true)}>
         Show info
       </button>
       {showModal && (
@@ -25,7 +25,7 @@ const More = () => {
           <p>before you wreck yourself</p>
           <a href='/'>Read about it...</a>
         </Modal>
-      )}
+      )} */}
 
       <Title text='Robs coding world' subtitle={subtitle} />
 
