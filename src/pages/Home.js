@@ -6,13 +6,15 @@ import NewEventForm from '../components/NewEventForm';
 const Home = () => {
   const [name, setName] = useState('Rob');
   const [showEvents, setShowEvents] = useState(false);
-  const [events, setEvents] = useState([
-    { title: 'End racism and opression', id: 1 },
-    { title: 'Take care of nature, pick up all your trash', id: 2 },
-    { title: 'End violence and control gun violence', id: 3 },
-  ]);
-
+  const [events, setEvents] = useState([]);
   const [showMod, setShowMod] = useState(false);
+
+  const addEvent = (event) => {
+    setEvents((prevEvents) => {
+      return [...prevEvents, event];
+    });
+    setShowMod(false);
+  };
 
   const handleClick = () => {
     setName(prompt('What is your name'));
@@ -24,14 +26,7 @@ const Home = () => {
         return id !== event.id;
       });
     });
-    };
-    
-    
-  const handleMod = () => {
-    setShowMod(false);
   };
-
-
 
   return (
     <div className='home'>
@@ -75,8 +70,8 @@ const Home = () => {
       </button>
 
       {showMod && (
-        <Modal handleMod={handleMod}>
-          <NewEventForm />
+        <Modal>
+          <NewEventForm addEvent={addEvent} />
         </Modal>
       )}
     </div>
