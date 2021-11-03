@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import EventList from '../components/EventList';
 import Modal from '../components/Modal';
+import NewEventForm from '../components/NewEventForm';
 
 const Home = () => {
   const [name, setName] = useState('Rob');
@@ -70,14 +71,12 @@ const Home = () => {
       {showEvents && <EventList events={events} handleEvent={handleEvent} />}
 
       <button className='btn' onClick={() => setShowMod(true)}>
-        show modal
+        Add new event
       </button>
 
       {showMod && (
         <Modal handleMod={handleMod}>
-          <h2>Check your self</h2>
-          <p>before you wreck yourself</p>
-          <a href='/'>Read about it...</a>
+          <NewEventForm />
         </Modal>
       )}
     </div>
